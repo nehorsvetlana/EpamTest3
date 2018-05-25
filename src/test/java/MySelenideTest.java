@@ -48,7 +48,7 @@ public class MySelenideTest {
         EpamSelenid.diffPage.selectDropdown(DROPDOWN.toString());
         //EpamSelenid.diffPage.checkLogsSelected();
         EpamSelenid.diffPage.selectUn(DROPDOWN.toString());
-        Selenide.refresh();//обновление страницы
+        Selenide.refresh();//обновление страниц
         EpamSelenid.diffPage.selectCheckBox();
         EpamSelenid.diffPage.checkLogsSelected();
     }
