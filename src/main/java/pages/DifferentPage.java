@@ -14,7 +14,7 @@ import static enums.DifferentDate.CHECKBOX1;
 import static enums.DifferentDate.CHECKBOX2;
 import static enums.DifferentDate.RADIOB;
 
-
+// TODO code convention !
 public class DifferentPage {
     @FindBy (css = ".dropdown-menu-login")
     SelenideElement dropdown;
@@ -43,6 +43,7 @@ public class DifferentPage {
     }
     public void interfaceServing(){
         //Sizzle
+        // TODO thats fine, but it will be better with loop =)
         $(".label-checkbox:contains('Water')").shouldBe(exist);
         $(".label-checkbox:contains('Earth')").should(exist);
         $(".label-checkbox:contains('Wind')").should(exist);
