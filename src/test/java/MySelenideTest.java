@@ -51,6 +51,7 @@ public class MySelenideTest {
         Selenide.refresh();//обновление страниц
         EpamSelenid.diffPage.selectCheckBox();
         EpamSelenid.diffPage.checkLogsSelected();
+
     }
 }
 
