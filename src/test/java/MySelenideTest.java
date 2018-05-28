@@ -1,4 +1,7 @@
-
+/* Copyright (C) 2018 Svetlana Nekhoroshikh
+   Telematics
+   33607
+ */
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.Before;
@@ -8,8 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static com.codeborne.selenide.Configuration.SelectorMode.Sizzle;
-import static enums.DifferentDate.DROPDOWN;
-import static enums.DifferentDate.RADIOB;
+import static enums.DifferentDate.*;
 import static enums.HomeDate.*;
 import java.util.concurrent.TimeUnit;
 
@@ -23,7 +25,7 @@ public class MySelenideTest {
     @BeforeClass
     public static void BeforeTest() {
         //1 Create a new test
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Светлана\\IdeaProjects\\EpamHomeWork3\\drivers\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Светлана\\IdeaProjects\\EpamHomeWork3\\drivers\\chromedriver.exe");
         //driver = new ChromeDriver();
        // driver.manage().window().maximize();//размер окна
         Configuration.browser = "chrome";
@@ -33,25 +35,26 @@ public class MySelenideTest {
 
     @Test
     public void Case1() {
+        //HomePage
         EpamSelenid.homePage.open();
         EpamSelenid.homePage.login(LOGIN.toString(), PASSWORD.toString());
         EpamSelenid.homePage.checkUserLogIn(USER_NAME.toString());
         EpamSelenid.homePage.check4Text();
         EpamSelenid.homePage.check2Text(HOME_PAGE_TEXT.toString(), HOME_PAGE_TITLE.toString());
         EpamSelenid.homePage.picture();
-        EpamSelenid.homePage.existDropHeader(HOME_PAGE_DROP_HEADER_MENU_T1.toString(), HOME_PAGE_DROP_HEADER_MENU_T2.toString(), HOME_PAGE_DROP_HEADER_MENU_T3.toString(), HOME_PAGE_DROP_HEADER_MENU_T4.toString(), HOME_PAGE_DROP_HEADER_MENU_T5.toString(), HOME_PAGE_DROP_HEADER_MENU_T6.toString());
-        EpamSelenid.homePage.existDropLeft(HOME_PAGE_DROP_HEADER_MENU_T1.toString(), HOME_PAGE_DROP_HEADER_MENU_T2.toString(), HOME_PAGE_DROP_HEADER_MENU_T3.toString(), HOME_PAGE_DROP_HEADER_MENU_T4.toString(), HOME_PAGE_DROP_HEADER_MENU_T5.toString(), HOME_PAGE_DROP_HEADER_MENU_T6.toString());
+        EpamSelenid.homePage.existDropHeader(DROP_T1.toString(),DROP_T2.toString(),DROP_T3.toString(),DROP_T4.toString(),DROP_T5.toString(),DROP_T6.toString());
+        EpamSelenid.homePage.existDropLeft(DROP_T1.toString(),DROP_T2.toString(),DROP_T3.toString(),DROP_T4.toString(),DROP_T5.toString(),DROP_T6.toString());
         EpamSelenid.homePage.openPageElement();
+        //Different Element Page
         EpamSelenid.diffPage.interfaceServing();
         EpamSelenid.diffPage.selectCheckBox();
         EpamSelenid.diffPage.selectRadios();
         EpamSelenid.diffPage.selectDropdown(DROPDOWN.toString());
-        //EpamSelenid.diffPage.checkLogsSelected();
+        EpamSelenid.diffPage.checkLogsSelected(CHECKBOX1.toString(),CHECKBOX2.toString(), RADIOB.toString(),DROPDOWN.toString());
         EpamSelenid.diffPage.selectUn(DROPDOWN.toString());
         Selenide.refresh();//обновление страниц
         EpamSelenid.diffPage.selectCheckBox();
-        EpamSelenid.diffPage.checkLogsSelected();
-
+        EpamSelenid.diffPage.checkLogSelected(CHECKBOX1.toString(),CHECKBOX2.toString());
     }
 }
 
