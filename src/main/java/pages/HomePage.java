@@ -39,6 +39,9 @@ public class HomePage {
     @FindBy(css = " .dropdown-menu a[href='page8.htm']")
     SelenideElement differentElements;
 
+    @FindBy(css = " .dropdown-menu a[href='page4.htm']")
+    SelenideElement datePage;
+
 
     public HomePage() {
     Selenide.page(this);
@@ -102,5 +105,9 @@ public class HomePage {
     public void openPageElement(){
         serviceDrop.click();
         differentElements.click();
+    }
+    public void openPageDates(){
+        serviceDrop.click();
+        datePage.click();
     }
 }

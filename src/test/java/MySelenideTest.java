@@ -32,9 +32,8 @@ public class MySelenideTest {
         Configuration.selectorMode = Sizzle; //Теперь в Selenide можно использовать CSS3 селекторы для поиска элементов!
         EpamSelenid.init();
     }
-
     @Test
-    public void Case1() {
+   public void Case1() {
         //HomePage
         EpamSelenid.homePage.open();
         EpamSelenid.homePage.login(LOGIN.toString(), PASSWORD.toString());
@@ -56,5 +55,14 @@ public class MySelenideTest {
         EpamSelenid.diffPage.selectCheckBox();
         EpamSelenid.diffPage.checkLogSelected(CHECKBOX1.toString(),CHECKBOX2.toString());
     }
+   /*
+    public void Case2() {
+        //HomePage
+        EpamSelenid.homePage.open();
+        EpamSelenid.homePage.login(LOGIN.toString(), PASSWORD.toString());
+        EpamSelenid.homePage.checkUserLogIn(USER_NAME.toString());
+
+    }*/
+
 }
 

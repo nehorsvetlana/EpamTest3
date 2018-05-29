@@ -28,7 +28,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <webdriver.chrome.driver>
-                            C:/Users/Светлана/IdeaProjects/EpamHomeWork3/drivers/chromedriver
+                            C:\\Users\\Светлана\\IdeaProjects\\EpamHomeWork3\\drivers\\chromedriver.exe
                         </webdriver.chrome.driver>
                     </systemPropertyVariables>
                 </configuration>
