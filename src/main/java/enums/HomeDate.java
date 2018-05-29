@@ -1,7 +1,6 @@
 package enums;
 
-import java.util.Arrays;
-
+//home page enum
 public enum HomeDate {
     LOGIN("epam"),
     PASSWORD("1234"),

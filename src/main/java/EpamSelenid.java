@@ -4,7 +4,7 @@ import pages.ContactPage;
 import pages.DataPage;
 import pages.DifferentPage;
 import pages.HomePage;
-
+//all
 public class EpamSelenid {
     static public HomePage homePage;
     static public DifferentPage diffPage;

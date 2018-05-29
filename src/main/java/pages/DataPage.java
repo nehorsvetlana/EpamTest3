@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Condition.text;
 import static java.lang.Math.abs;
-
+//test case2
 public class DataPage {
     /**
      * Ползунки

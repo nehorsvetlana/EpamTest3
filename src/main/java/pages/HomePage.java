@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
-
+//homePage
 public class HomePage {
     @FindBy(css = ".profile-photo")
     SelenideElement profilePhoto;
