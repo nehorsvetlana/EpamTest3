@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
-
+// TODO this code does not match with code convention...
 public class HomePage {
     @FindBy(css = ".profile-photo")
     SelenideElement profilePhoto;

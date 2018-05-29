@@ -19,6 +19,8 @@ import java.util.concurrent.TimeUnit;
 //http://ru.selenide.org/documentation.html
 
 //Create a new test in a new Java class, specify test name accordingly checking functionality
+// TODO lots of trash in repo...
+// TODO this code does not match with code convention...
 public class MySelenideTest {
     private static WebDriver driver;
 
@@ -41,6 +43,9 @@ public class MySelenideTest {
         EpamSelenid.homePage.check4Text();
         EpamSelenid.homePage.check2Text(HOME_PAGE_TEXT.toString(), HOME_PAGE_TITLE.toString());
         EpamSelenid.homePage.picture();
+        // TODO it will be better with loops.
+        // TODO Create a list with expected texts, create a list with actual text
+        // TODO compare...
         EpamSelenid.homePage.existDropHeader(DROP_T1.toString(),DROP_T2.toString(),DROP_T3.toString(),DROP_T4.toString(),DROP_T5.toString(),DROP_T6.toString());
         EpamSelenid.homePage.existDropLeft(DROP_T1.toString(),DROP_T2.toString(),DROP_T3.toString(),DROP_T4.toString(),DROP_T5.toString(),DROP_T6.toString());
         EpamSelenid.homePage.openPageElement();
