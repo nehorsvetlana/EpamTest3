@@ -39,7 +39,7 @@ public class MySelenideTest {
         EpamSelenid.init();
     }
 
-    @Test(enabled = false)
+    @Test
     public void Case1() {
         //HomePage
         EpamSelenid.homePage.open();
@@ -63,7 +63,7 @@ public class MySelenideTest {
         EpamSelenid.diffPage.checkLogSelected(CHECKBOX1.toString(), CHECKBOX2.toString());
     }
 
-    @Test
+    @Test(enabled = false)
     public void Case2() {
         //HomePage
         //Open test site by URL

@@ -1,5 +1,7 @@
-*.iml
-*.log
-.idea
-target
-build
+*/*.iml
+*/target
+*/allure-results
+*/build
+*/.idea
+*/.logs
+*/*.jpg

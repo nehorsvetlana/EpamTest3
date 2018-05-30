@@ -17,8 +17,8 @@ public class AllureListener extends TestListenerAdapter {
         byte[] array = {1};
         try {
             return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
-        } catch (WebDriverException exep) {
-            exep.printStackTrace();
+        } catch (WebDriverException e) {
+            e.printStackTrace();
         }
         return array;
     }
