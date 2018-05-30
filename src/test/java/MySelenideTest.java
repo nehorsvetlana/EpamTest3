@@ -5,17 +5,15 @@
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
 import static com.codeborne.selenide.Configuration.SelectorMode.Sizzle;
 import static enums.DifferentDate.*;
 import static enums.HomeDate.*;
-
-import java.util.concurrent.TimeUnit;
 
 
 //http://ru.selenide.org/documentation.html
@@ -25,7 +23,7 @@ public class MySelenideTest {
     private static WebDriver driver;
 
     @BeforeClass
-    public static void BeforeTest() {
+    public static void BeforeTestSelenide() {
         //1 Create a new test
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Светлана\\IdeaProjects\\EpamHomeWork3\\drivers\\chromedriver.exe");
         //driver = new ChromeDriver();
@@ -58,7 +56,8 @@ public class MySelenideTest {
         EpamSelenid.diffPage.selectCheckBox();
         EpamSelenid.diffPage.checkLogSelected(CHECKBOX1.toString(), CHECKBOX2.toString());
     }
-    /*public void Case2() {
+    /*@Test
+    public void Case2() {
         //HomePage
         //Open test site by URL
         EpamSelenid.homePage.open();
@@ -75,8 +74,7 @@ public class MySelenideTest {
         //Using drag-and-drop set Range sliders. left sliders - the most rigth position, right slider - the most rigth position.
         EpamSelenid.dataPage.setDragAndDrop(100,100);
         //Using drag-and-drop set Range sliders.
-        //EpamSelenid.dataPage.setDragAndDrop(30,70);
+        EpamSelenid.dataPage.setDragAndDrop(30,70);
    }*/
-
 }
 

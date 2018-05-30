@@ -18,13 +18,14 @@ public enum HomeDate {
     DROP_T5("Table with pages"),
     DROP_T6("Different Elements");
     private String text;
+
     HomeDate(String text) {
         this.text = text;
     }
 
     @Override
     public String toString() {
-       return this.text;
+        return this.text;
     }
 
 

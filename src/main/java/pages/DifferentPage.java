@@ -16,19 +16,19 @@ import static enums.DifferentDate.RADIOB;
 
 // Code conversion https://habr.com/post/112042/
 public class DifferentPage {
-    @FindBy (css = ".dropdown-menu-login")
+    @FindBy(css = ".dropdown-menu-login")
     SelenideElement dropDown;
 
-    @FindBy (css = ".uui-button[value='Default Button']")
+    @FindBy(css = ".uui-button[value='Default Button']")
     SelenideElement defButton;
 
-    @FindBy (css = "input[value='Button']")
+    @FindBy(css = "input[value='Button']")
     SelenideElement Button;
 
-    @FindBy (css = "#mCSB_1_container")
+    @FindBy(css = "#mCSB_1_container")
     SelenideElement leftSection;
 
-    @FindBy (css = "._mCS_2")
+    @FindBy(css = "._mCS_2")
     SelenideElement rightSection;
 
     @FindBy(css = ".logs")
@@ -41,8 +41,9 @@ public class DifferentPage {
         Selenide.page(this);
         logList = new java.util.LinkedList<>();
     }
+
     //Check interface on Service page, it contains all needed elements.
-    public void interfaceServing(){
+    public void interfaceServing() {
         //Sizzle
         $(".label-checkbox:contains('Water')").shouldBe(exist);
         $(".label-checkbox:contains('Earth')").should(exist);
@@ -58,8 +59,9 @@ public class DifferentPage {
         leftSection.should(exist);
         rightSection.should(exist);
     }
+
     //Select and assert checkboxes
-    public void selectCheckBox(){
+    public void selectCheckBox() {
         //http://selenide.org/javadoc/3.5/com/codeborne/selenide/SelenideElement.html
         $("label:contains('Water')").setSelected(true);
         $(".label-checkbox:contains('Water') input").shouldBe(checked);
@@ -68,32 +70,37 @@ public class DifferentPage {
         $(".label-checkbox:contains('Wind') input").shouldBe(checked);
         logList.add(CHECKBOX2.toString());
     }
+
     //Select radio
     public void selectRadios() {
         $(".label-radio:contains('Selen')").setSelected(true);
         $(".label-radio:contains('Selen') input").shouldBe(checked);
         logList.add(RADIOB.toString());
     }
+
     //Select in dropdown
-    public void selectDropdown(String option){
+    public void selectDropdown(String option) {
         $(".colors .uui-form-element").selectOption(option);
         $(".colors .uui-form-element").getSelectedOption().shouldBe(enabled);
         logList.add(option);
     }
+
     //Check in logs section selected values checkbox
-    public void checkLogSelected(String option1, String option2){
+    public void checkLogSelected(String option1, String option2) {
         //exist.matchText(option);//проверка на содержание части текста
         log.should(matchText(option1));
         log.should(matchText(option2));
     }
-    public void checkLogsSelected(String option1, String option2,String option3,String option4){
+
+    public void checkLogsSelected(String option1, String option2, String option3, String option4) {
         //exist.matchText(option);//проверка на содержание части текста
-        checkLogSelected(option1,option2);
+        checkLogSelected(option1, option2);
         log.should(matchText(option3));
         log.should(matchText(option4));
     }
+
     //Not Check
-    public void selectUn(String option){
+    public void selectUn(String option) {
         logList.remove(RADIOB.toString());
         logList.remove(option);
         logList.remove(CHECKBOX1.toString());
