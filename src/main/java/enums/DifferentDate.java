@@ -6,6 +6,7 @@ public enum DifferentDate {
     RADIOB("Selen"),
     DROPDOWN("Yellow");
     private String text;
+
     DifferentDate(String text) {
         this.text = text;
     }
