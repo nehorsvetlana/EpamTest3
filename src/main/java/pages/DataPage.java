@@ -2,15 +2,18 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import static com.codeborne.selenide.Condition.text;
-import static java.lang.Math.abs;
+
 //test case2
 public class DataPage {
+    @FindBy(css = ".row")
+    SelenideElement row;
     /**
      * Ползунки
      */
@@ -89,6 +92,7 @@ public class DataPage {
 
     public void setDragAndDrop(int leftSlider, int rightSlider) {
         slider.shouldHaveSize(2);//2 ползунка
+        row.scrollTo();
         Actions actions = new Actions(WebDriverRunner.getWebDriver());
         if ((getCurrentPositionLeft() == getCurrentPositionRight()) && (leftSlider < rightSlider)) {
             setDragAndDropLeft(leftSlider, rightSlider, actions);

@@ -80,3 +80,9 @@
 [0529/170337.203:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
 [0529/171612.672:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
 [0529/171708.474:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0529/175709.477:ERROR:file_io_win.cc(161)] CreateFile C:\Users\B215~1\AppData\Local\Temp\scoped_dir6864_29761\Crashpad\settings.dat: Системе не удается найти указанный путь. (0x3)
+[0529/175709.481:ERROR:file_io_win.cc(170)] CreateFile C:\Users\B215~1\AppData\Local\Temp\scoped_dir6864_29761\Crashpad\reports\76884362-9e06-4962-a3a2-d336e7cef438.dmp: Системе не удается найти указанный путь. (0x3)
+[0529/175709.481:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0530/080941.898:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0530/081734.886:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0530/123915.203:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
