@@ -91,12 +91,6 @@
                             <value>ru.yandex.qatools.allure.testng.AllureTestListener</value>
                         </property>
                     </properties>
-                    <systemProperties>
-                        <property>
-                            <name>allure.results.directory</name>
-                            <value>C:\Program Files (x86)\Jenkins\workspace\HW_Test\allure-results</value>
-                        </property>
-                    </systemProperties>
                 </configuration>
                 <dependencies>
                     <dependency>
