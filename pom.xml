@@ -14,6 +14,8 @@
         <remote.driver.url>127.0.0.1:4444</remote.driver.url>
         <homepage.url>https://jdi-framework.github.io/tests/index.htm</homepage.url>
         <driver.path>Users\\Светлана\\IdeaProjects\\EpamHomeWork3\\drivers\\chromedriver</driver.path>
+        <allure.results.directory>target/allure-results</allure.results.directory>
+        <allure.report.directory>target/allure-report</allure.report.directory>
         <test.runner>testnglab.xml</test.runner>
     </properties>
     <build>
@@ -82,10 +84,16 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/runners/${test.runner}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <testFailureIgnore>false</testFailureIgnore>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
                     </argLine>
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>${allure.results.directory}</value>
+                        </property>
+                    </systemProperties>
                     <properties>
                         <property>
                             <name>listener</name>
