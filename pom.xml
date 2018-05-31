@@ -78,12 +78,6 @@
                         </webdriver.chrome.driver>
                         <selenide.browser>utils.CustomWebDriverProvider</selenide.browser>
                     </systemPropertyVariables>
-                    <systemProperties>
-                        <property>
-                            <name>allure.results.directory</name>
-                            <value>C:\Program Files (x86)\Jenkins\workspace\HW_Test5\allure-report</value>
-                        </property>
-                    </systemProperties>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/runners/${test.runner}</suiteXmlFile>
                     </suiteXmlFiles>
@@ -103,7 +97,7 @@
             <plugin>
                 <groupId>ru.yandex.qatools.allure</groupId>
                 <artifactId>allure-maven-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.6</version>
                 <executions>
                     <execution>
                         <goals>
