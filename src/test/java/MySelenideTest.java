@@ -65,7 +65,7 @@ public class MySelenideTest {
         EpamSelenid.diffPage.selectCheckBox();
         EpamSelenid.diffPage.checkLogSelected(CHECKBOX1.toString(), CHECKBOX2.toString());
     }
-
+/*
     @Test(enabled = false)
     public void Case2() {
         //HomePage
@@ -86,5 +86,6 @@ public class MySelenideTest {
         //Using drag-and-drop set Range sliders.
         EpamSelenid.dataPage.setDragAndDrop(30, 70);
     }
+    */
 }
 
