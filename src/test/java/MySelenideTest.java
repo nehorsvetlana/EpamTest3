@@ -36,9 +36,9 @@ public class MySelenideTest {
         //driver = new ChromeDriver();
         //driver.manage().window().maximize();//размер окна
         Configuration.browser = "chrome";
-        Configuration.startMaximized = true;
+        //Configuration.startMaximized = true;
         //Configuration.timeout = 50000;
-        //Configuration.browserSize="750x750";
+        Configuration.browserSize="700x700";
         Configuration.selectorMode = Sizzle; //Теперь в Selenide можно использовать CSS3 селекторы для поиска элементов!
         EpamSelenid.init();
     }
@@ -46,7 +46,7 @@ public class MySelenideTest {
     @Test
     public void Case1() {
         //HomePage
-        zoom(0.999);
+        zoom(0.2);
         EpamSelenid.homePage.open();
         EpamSelenid.homePage.login(LOGIN.toString(), PASSWORD.toString());
         EpamSelenid.homePage.checkUserLogIn(USER_NAME.toString());
