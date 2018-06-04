@@ -36,8 +36,9 @@ public class MySelenideTest {
         //driver = new ChromeDriver();
         //driver.manage().window().maximize();//размер окна
         Configuration.browser = "chrome";
-        Configuration.startMaximized = true;
+        //Configuration.startMaximized = true;
         Configuration.timeout = 50000;
+        Configuration.browserSize="1200x700";
         Configuration.selectorMode = Sizzle; //Теперь в Selenide можно использовать CSS3 селекторы для поиска элементов!
         EpamSelenid.init();
     }
