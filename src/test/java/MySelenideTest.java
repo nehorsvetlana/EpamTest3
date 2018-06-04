@@ -9,6 +9,7 @@ import com.codeborne.selenide.Selenide;
 import enums.HomeList;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
@@ -28,13 +29,14 @@ import static enums.HomeDate.*;
 public class MySelenideTest {
     private static WebDriver driver;
 
-    @BeforeClass
+    @BeforeSuite
     public static void BeforeTestSelenide() {
         //1 Create a new test
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Светлана\\IdeaProjects\\EpamHomeWork3\\drivers\\chromedriver.exe");
         //driver = new ChromeDriver();
-        // driver.manage().window().maximize();//размер окна
+        //driver.manage().window().maximize();//размер окна
         Configuration.browser = "chrome";
+        Configuration.startMaximized = true;
         Configuration.selectorMode = Sizzle; //Теперь в Selenide можно использовать CSS3 селекторы для поиска элементов!
         EpamSelenid.init();
     }

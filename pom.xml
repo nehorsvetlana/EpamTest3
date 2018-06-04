@@ -169,6 +169,11 @@
             <artifactId>allure-testng-adaptor</artifactId>
             <version>LATEST</version>
         </dependency>
+        <dependency>
+            <groupId>com.epam.jdi</groupId>
+            <artifactId>jdi-uitest-web</artifactId>
+            <version>1.0.71</version>
+        </dependency>
     </dependencies>
     <!-- Allure reporting -->
     <reporting>
