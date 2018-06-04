@@ -46,6 +46,7 @@ public class MySelenideTest {
     @Test
     public void Case1() {
         //HomePage
+
         //zoom(0.2);
         EpamSelenid.homePage.open();
         EpamSelenid.homePage.login(LOGIN.toString(), PASSWORD.toString());
