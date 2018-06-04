@@ -10,7 +10,7 @@ import ru.yandex.qatools.allure.annotations.Attachment;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-public class AllureListener extends TestListenerAdapter {
+public class AllureAttachmentListener extends TestListenerAdapter {
 
     @Attachment
     public byte[] makeScreenshot() {

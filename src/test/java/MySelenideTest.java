@@ -3,12 +3,11 @@
    33607
  */
 
-import allure.AllureListener;
+import allure.AllureAttachmentListener;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import enums.HomeList;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -23,7 +22,7 @@ import static enums.HomeDate.*;
 //http://ru.selenide.org/documentation.html
 
 //Create a new test in a new Java class, specify test name accordingly checking functionality
-@Listeners(AllureListener.class)
+@Listeners(AllureAttachmentListener.class)
 @Features({"Selenide Test (Page Object)"})
 @Stories({"MySelenide Test"})
 public class MySelenideTest {
