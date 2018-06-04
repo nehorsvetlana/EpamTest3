@@ -13,6 +13,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Stories;
+import static com.codeborne.selenide.Selenide.zoom;
 
 import static com.codeborne.selenide.Configuration.SelectorMode.Sizzle;
 import static enums.DifferentDate.*;
@@ -35,9 +36,10 @@ public class MySelenideTest {
         //driver = new ChromeDriver();
         //driver.manage().window().maximize();//размер окна
         Configuration.browser = "chrome";
-        //Configuration.startMaximized = true;
+        Configuration.startMaximized = true;
+        zoom(0.5);
         //Configuration.timeout = 50000;
-        Configuration.browserSize="750x750";
+        //Configuration.browserSize="750x750";
         Configuration.selectorMode = Sizzle; //Теперь в Selenide можно использовать CSS3 селекторы для поиска элементов!
         EpamSelenid.init();
     }
