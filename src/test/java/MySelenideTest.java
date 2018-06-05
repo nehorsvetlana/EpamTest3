@@ -59,7 +59,7 @@ public class MySelenideTest {
         EpamSelenid.homePage.openPageElement();
         //Different Element Page
         EpamSelenid.diffPage.interfaceServing();
-        EpamSelenid.diffPage.selectCheckBox();
+        /*EpamSelenid.diffPage.selectCheckBox();
         EpamSelenid.diffPage.selectRadios();
         EpamSelenid.diffPage.selectDropdown(DROPDOWN.toString());
         EpamSelenid.diffPage.checkLogsSelected(CHECKBOX1.toString(), CHECKBOX2.toString(), RADIOB.toString(), DROPDOWN.toString());
@@ -67,6 +67,7 @@ public class MySelenideTest {
         Selenide.refresh();//обновление страниц
         EpamSelenid.diffPage.selectCheckBox();
         EpamSelenid.diffPage.checkLogSelected(CHECKBOX1.toString(), CHECKBOX2.toString());
+        */
     }
 /*
     @Test(enabled = false)
