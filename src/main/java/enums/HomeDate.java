@@ -3,7 +3,7 @@ package enums;
 //home page enum
 public enum HomeDate {
     LOGIN("epam"),
-    PASSWORD("1234"),
+    PASSWORD("1234\n"),
     USER_NAME("PITER CHAILOVSKII"),
     HOME_PAGE_TEXT1("To include good practices\nand ideas from successful\nEPAM projec"),
     HOME_PAGE_TEXT2("To be flexible and\ncustomizable"),

@@ -62,7 +62,7 @@ public class HomePage {
         profilePhoto.click();
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
-        submit.click();
+        //submit.click();
     }
 
     //Assert User name in the left-top side of screen that user is loggined
