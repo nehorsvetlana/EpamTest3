@@ -59,11 +59,9 @@ public class HomePage {
 
     @Step("Perform login")
     public void login(String login, String password) {
-        profilePhoto.scrollTo();
         profilePhoto.click();
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
-        submit.scrollTo();
         submit.click();
     }
 
