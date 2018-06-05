@@ -43,6 +43,7 @@ public class DifferentPage {
     @Step("Check interface")
     public void interfaceServing() {
         //Sizzle
+        $(".label-checkbox:contains('Water')").scrollTo();
         $(".label-checkbox:contains('Water')").shouldBe(exist);
         $(".label-checkbox:contains('Earth')").scrollTo();
         $(".label-checkbox:contains('Earth')").should(exist);
@@ -94,6 +95,7 @@ public class DifferentPage {
     //Select in dropdown
     @Step("Select in dropdown")
     public void selectDropdown(String option) {
+        $(".colors .uui-form-element").scrollTo();
         $(".colors .uui-form-element").selectOption(option);
         $(".colors .uui-form-element").getSelectedOption().shouldBe(enabled);
         logList.add(option);
