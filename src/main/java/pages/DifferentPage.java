@@ -90,6 +90,7 @@ public class DifferentPage {
     @Step("Check in logs section selected values 2 checkbox")
     public void checkLogSelected(String option1, String option2) {
         //exist.matchText(option);//проверка на содержание части текста
+        log.scrollTo();
         log.should(matchText(option1));
         log.should(matchText(option2));
     }
@@ -97,6 +98,7 @@ public class DifferentPage {
     @Step("Check in logs section selected values 4 checkbox")
     public void checkLogsSelected(String option1, String option2, String option3, String option4) {
         //exist.matchText(option);//проверка на содержание части текста
+        log.scrollTo();
         checkLogSelected(option1, option2);
         log.should(matchText(option3));
         log.should(matchText(option4));

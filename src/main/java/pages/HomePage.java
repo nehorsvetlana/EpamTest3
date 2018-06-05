@@ -59,9 +59,11 @@ public class HomePage {
 
     @Step("Perform login")
     public void login(String login, String password) {
+        profilePhoto.scrollTo();
         profilePhoto.click();
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
+        submit.scrollTo();
         submit.click();
     }
 
@@ -75,6 +77,7 @@ public class HomePage {
     @Step("Check 4 texts on home page")
     public void check4Text() {
         //Sizzle
+        $(".benefit-txt:contains(\"To include\")").scrollTo();
         $(".benefit-txt:contains(\"To include\")").shouldBe(exist);
         $(".benefit-txt:contains(\"flexible and\")").should(exist);
         $(".benefit-txt:contains(\"multiplatform\")").should(exist);

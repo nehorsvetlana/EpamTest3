@@ -36,7 +36,7 @@ public class MySelenideTest {
         //driver = new ChromeDriver();
         //driver.manage().window().maximize();//размер окна
         Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080x24";
+        //Configuration.browserSize = "1920x1080x24";
         Configuration.startMaximized = true;
         //Configuration.timeout = 50000;
         //Configuration.browserSize="700x700";
@@ -47,7 +47,7 @@ public class MySelenideTest {
     @Test
     public void Case1() {
         //HomePage
-        zoom(0.5);
+        //zoom(0.5);
         EpamSelenid.homePage.open();
         EpamSelenid.homePage.login(LOGIN.toString(), PASSWORD.toString());
         EpamSelenid.homePage.checkUserLogIn(USER_NAME.toString());
