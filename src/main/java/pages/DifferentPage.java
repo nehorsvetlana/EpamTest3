@@ -44,15 +44,25 @@ public class DifferentPage {
     public void interfaceServing() {
         //Sizzle
         $(".label-checkbox:contains('Water')").shouldBe(exist);
+        $(".label-checkbox:contains('Earth')").scrollTo();
         $(".label-checkbox:contains('Earth')").should(exist);
+        $(".label-checkbox:contains('Wind')").scrollTo();
         $(".label-checkbox:contains('Wind')").should(exist);
+        $(".label-checkbox:contains('Fire')").scrollTo();
         $(".label-checkbox:contains('Fire')").should(exist);
+        $(".label-radio:contains('Gold')").scrollTo();
         $(".label-radio:contains('Gold')").shouldBe(exist);
+        $(".label-radio:contains('Silver')").scrollTo();
         $(".label-radio:contains('Silver')").should(exist);
+        $(".label-radio:contains('Bronze')").scrollTo();
         $(".label-radio:contains('Bronze')").should(exist);
+        $(".label-radio:contains('Selen')").scrollTo();
         $(".label-radio:contains('Selen')").should(exist);
+        dropDown.scrollTo();
         dropDown.should(exist);
+        defButton.scrollTo();
         defButton.should(exist);
+        Button.scrollTo();
         Button.should(exist);
         leftSection.should(exist);
         rightSection.should(exist);
@@ -62,6 +72,7 @@ public class DifferentPage {
     @Step("Select and assert checkboxes")
     public void selectCheckBox() {
         //http://selenide.org/javadoc/3.5/com/codeborne/selenide/SelenideElement.html
+        $("label:contains('Water')").scrollTo();
         $("label:contains('Water')").setSelected(true);
         $(".label-checkbox:contains('Water') input").shouldBe(checked);
         logList.add(CHECKBOX1.toString());
