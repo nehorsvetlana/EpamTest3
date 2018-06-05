@@ -65,6 +65,7 @@ public class DifferentPage {
         $("label:contains('Water')").setSelected(true);
         $(".label-checkbox:contains('Water') input").shouldBe(checked);
         logList.add(CHECKBOX1.toString());
+        $(".label-checkbox:contains('Wind')").scrollTo();
         $(".label-checkbox:contains('Wind')").setSelected(true);
         $(".label-checkbox:contains('Wind') input").shouldBe(checked);
         logList.add(CHECKBOX2.toString());
@@ -73,6 +74,7 @@ public class DifferentPage {
     //Select radio
     @Step("Select radio")
     public void selectRadios() {
+        $(".label-radio:contains('Selen')").scrollTo();
         $(".label-radio:contains('Selen')").setSelected(true);
         $(".label-radio:contains('Selen') input").shouldBe(checked);
         logList.add(RADIOB.toString());
@@ -90,7 +92,6 @@ public class DifferentPage {
     @Step("Check in logs section selected values 2 checkbox")
     public void checkLogSelected(String option1, String option2) {
         //exist.matchText(option);//проверка на содержание части текста
-        log.scrollTo();
         log.should(matchText(option1));
         log.should(matchText(option2));
     }
@@ -98,7 +99,6 @@ public class DifferentPage {
     @Step("Check in logs section selected values 4 checkbox")
     public void checkLogsSelected(String option1, String option2, String option3, String option4) {
         //exist.matchText(option);//проверка на содержание части текста
-        log.scrollTo();
         checkLogSelected(option1, option2);
         log.should(matchText(option3));
         log.should(matchText(option4));

@@ -51,7 +51,6 @@ public class MySelenideTest {
         EpamSelenid.homePage.open();
         EpamSelenid.homePage.login(LOGIN.toString(), PASSWORD.toString());
         EpamSelenid.homePage.checkUserLogIn(USER_NAME.toString());
-        Configuration.browserSize = "1920x1080x24";
         EpamSelenid.homePage.check4Text();
         EpamSelenid.homePage.check2Text(HOME_PAGE_TEXT.toString(), HOME_PAGE_TITLE.toString());
         EpamSelenid.homePage.picture();
