@@ -1,6 +1,12 @@
 package enums;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+import javax.naming.NamingException;
 //home page enum
+
+@AllArgsConstructor
+@Getter
 public enum HomeDate {
     LOGIN("epam"),
     PASSWORD("1234\n"),
@@ -28,5 +34,9 @@ public enum HomeDate {
         return this.text;
     }
 
+    private Object value;
 
+    public Object getValue() {
+        return value;
+    }
 }
